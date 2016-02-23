@@ -1,4 +1,5 @@
 <ul id="usergrouplist" data-sort-groups="<?php p($_['sortGroups']); ?>">
+    <?php if(\OC_User::isAdminUser(\OC_User::getUser())) { ?>
 	<!-- Add new group -->
 	<li id="newgroup-init">
 		<a href="#">
@@ -11,6 +12,7 @@
 			<input type="submit" class="button icon-add svg" value="" />
 		</form>
 	</li>
+    <?php } ?>
 	<!-- Everyone -->
 	<li id="everyonegroup" data-gid="_everyone" data-usercount="" class="isgroup">
 		<a href="#">
