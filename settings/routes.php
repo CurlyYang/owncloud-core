@@ -60,6 +60,8 @@ $application->registerRoutes($this, [
 /** @var $this \OCP\Route\IRouter */
 
 // Settings pages
+$this->create('settings_system', '/settings/system')
+->actionInclude('settings/system.php');
 $this->create('settings_help', '/settings/help')
 	->actionInclude('settings/help.php');
 $this->create('settings_personal', '/settings/personal')
@@ -100,6 +102,8 @@ $this->create('settings_ajax_uninstallapp', '/settings/ajax/uninstallapp.php')
 	->actionInclude('settings/ajax/uninstallapp.php');
 $this->create('settings_ajax_navigationdetect', '/settings/ajax/navigationdetect.php')
 	->actionInclude('settings/ajax/navigationdetect.php');
+$this->create('settings_ajax_removeusergroup','/settings/ajax/removeusergroup.php')
+	->actionInclude('settings/ajax/removeusergroup.php');
 // admin
 $this->create('settings_ajax_excludegroups', '/settings/ajax/excludegroups.php')
 	->actionInclude('settings/ajax/excludegroups.php');
